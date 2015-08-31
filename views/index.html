@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script>
+		  document.addEventListener("DOMContentLoaded", function() {
+			  var socket = io();
+			  socket.on('pour', function(data){
+			    var node = document.createElement('H3');
+			    node.innerHTML = data.message
+			    
+			    var parent = document.getElementById("keg-" + data.keg);
+			    parent.insertBefore(node, parent.firstChild);
+				
+				socket.emit('getPourData');
+				socket.on('pourData', function(data){
+					var vol = document.createTextNode(data.data.volume + " oz.");
+					parent.insertBefore(vol, parent.firstChild);
+					var dur = document.createTextNode(data.data.duration + " secs.");
+					parent.insertBefore(dur, parent.firstChild);
+				});
+			  });
+		  });
+		</script>
+	</head>
+	<body>
+		<h1>Hello world</h1>
+		<div id='keg-1'>
+			<h2>Citra Pale Ale</h2>
+		</div>
+		<div id='keg-2'>
+			<h2>Honey Blone Ale</h2>
+		</div>
+	</body>
+</html>
