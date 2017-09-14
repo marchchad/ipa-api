@@ -29,25 +29,13 @@
     <meta name="msapplication-TileColor" content="#2F3BA2">
 
     <!-- Color the status bar on mobile devices -->
-    <meta name="theme-color" content="#2F3BA2">
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
+    <meta name="theme-color" content="#3f51b5">
 
     <!-- Material Design icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-
-    <!-- Material Design Lite page styles:
-    You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
-    Format: material.color1-color2.min.css, some examples:
-    material.red-teal.min.css
-    material.blue-orange.min.css
-    material.purple-indigo.min.css
-    -->
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-light_blue.min.css">
+    <!-- Material Design Lite page styles -->
+    <link rel="stylesheet" href="styles/material.min.css">
 
     <!-- Your styles -->
     <link rel="stylesheet" href="styles/main.css">
@@ -58,7 +46,11 @@
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>IPA API</h3>
+          <h3>
+            IPA API
+            <br>
+            <small>Monitor your homebrew</small>
+          </h3>
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
@@ -76,30 +68,32 @@
       </header>
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="home">
-          <section class="section--center">
+          <section class="section--center mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
             <h5>The IPA API provides homebrewers the ability to install a few sensors and gather tons of data about their
               brews that can be accessed anywhere.</h5>
+            </div>
           </section>
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
                 <h4 class="mdl-cell mdl-cell--12-col">Architecture</h4>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
+                  <div class="section__circle-container__circle mdl-color--accent"></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5>Lorem ipsum dolor sit amet</h5>
                   Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
                 </div>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
+                  <div class="section__circle-container__circle mdl-color--accent"></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5>Lorem ipsum dolor sit amet</h5>
                   Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
                 </div>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
+                  <div class="section__circle-container__circle mdl-color--accent"></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h5>Lorem ipsum dolor sit amet</h5>
@@ -266,8 +260,23 @@
       </main>
     </div>
 
-    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-    <!-- build:js scripts/main.min.js -->
+    <!-- build:js(app/) ../../scripts/main.min.js -->
+    <script src="./styles/src/mdlComponentHandler.js"></script>
+    <script src="./styles/src/button/button.js"></script>
+    <script src="./styles/src/checkbox/checkbox.js"></script>
+    <script src="./styles/src/icon-toggle/icon-toggle.js"></script>
+    <script src="./styles/src/menu/menu.js"></script>
+    <script src="./styles/src/progress/progress.js"></script>
+    <script src="./styles/src/radio/radio.js"></script>
+    <script src="./styles/src/slider/slider.js"></script>
+    <script src="./styles/src/spinner/spinner.js"></script>
+    <script src="./styles/src/switch/switch.js"></script>
+    <script src="./styles/src/tabs/tabs.js"></script>
+    <script src="./styles/src/textfield/textfield.js"></script>
+    <script src="./styles/src/tooltip/tooltip.js"></script>
+    <script src="./styles/src/layout/layout.js"></script>
+    <script src="./styles/src/data-table/data-table.js"></script>
+    <script src="./styles/src/ripple/ripple.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
